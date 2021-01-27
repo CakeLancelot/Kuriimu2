@@ -51,9 +51,9 @@ namespace Kore.Managers.Plugins.PluginLoader
                 return "~/Applications/Kuriimu2";
 
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                return "~/Kuriimu2";
+               return ".";
 
-            throw new InvalidOperationException($"Unsupported operating system: {RuntimeInformation.OSDescription}.");
+         throw new InvalidOperationException($"Unsupported operating system: {RuntimeInformation.OSDescription}.");
         }
 
         private IList<Type> GetPublicTypes<TPlugin>(IEnumerable<Assembly> assemblies, out IList<PluginLoadError> errors)
